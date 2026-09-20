@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>யாயும் ஞாயும் யாரா கியரோ | குறுந்தொகை 40</title>
+  <meta name="description" content="யாயும் ஞாயும் யாரா கியரோ — குறுந்தொகை 40 பொருள் · புவனேஸ்வரன் மற்றும் வசந்தலட்சுமிஸ்ரீ · 15.11.2026" />
+  <meta name="theme-color" content="#4A1420" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory: '#FBF7F0',
+            cream: '#F5EDE0',
+            parchment: '#EDE4D4',
+            maroon: {
+              DEFAULT: '#6B1E2E',
+              deep: '#4A1420',
+              soft: '#8B3A4A',
+            },
+            gold: {
+              DEFAULT: '#C4A35A',
+              light: '#D4B978',
+              pale: '#E8D9B0',
+            },
+            leaf: '#3C7F4A',
+          },
+          fontFamily: {
+            heading: ['"Arima"', '"Kavivanar"', 'serif'],
+            script: ['"Kavivanar"', 'cursive'],
+            body: ['"Mukta Malar"', 'sans-serif'],
+          },
+          boxShadow: {
+            soft: '0 8px 32px rgba(74, 20, 32, 0.08)',
+            card: '0 4px 24px rgba(74, 20, 32, 0.06)',
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arima:wght@400;500;600;700&family=Kavivanar&family=Mukta+Malar:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #FBF7F0;
+    }
+
+    /* Kolam-style dot grid, the way rice-flour dots are laid out before drawing */
+    .kolam-bg {
+      background-image: radial-gradient(circle, rgba(196, 163, 90, 0.28) 1.4px, transparent 1.5px);
+      background-size: 24px 24px;
+      background-position: 0 0;
+    }
+
+    /* Temple / saree "kara" border: gold triangles hanging from a maroon band */
+    .temple-edge-down {
+      height: 13px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='13' viewBox='0 0 18 13'%3E%3Cpath d='M0 0h18L9 13z' fill='%23C4A35A'/%3E%3C/svg%3E");
+      background-size: 18px 13px;
+      background-repeat: repeat-x;
+    }
+
+    .temple-edge-up {
+      height: 13px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='13' viewBox='0 0 18 13'%3E%3Cpath d='M0 13h18L9 0z' fill='%23C4A35A'/%3E%3C/svg%3E");
+      background-size: 18px 13px;
+      background-repeat: repeat-x;
+    }
+
+    .ornament-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, #C4A35A 25%, #C4A35A 75%, transparent 100%);
+    }
+
+    .poem-card {
+      background: linear-gradient(160deg, #FFFEFB 0%, #F8F1E6 100%);
+      border: 1px solid rgba(196, 163, 90, 0.4);
+    }
+
+    /* Gold bracket corners, like the framed borders on printed pattirikai */
+    .corner-frame {
+      position: relative;
+    }
+
+    .corner-frame .corner {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-color: #C4A35A;
+      border-style: solid;
+      border-width: 0;
+    }
+
+    .corner-frame .corner-tl { top: 8px; left: 8px; border-top-width: 2px; border-left-width: 2px; border-top-left-radius: 6px; }
+    .corner-frame .corner-tr { top: 8px; right: 8px; border-top-width: 2px; border-right-width: 2px; border-top-right-radius: 6px; }
+    .corner-frame .corner-bl { bottom: 8px; left: 8px; border-bottom-width: 2px; border-left-width: 2px; border-bottom-left-radius: 6px; }
+    .corner-frame .corner-br { bottom: 8px; right: 8px; border-bottom-width: 2px; border-right-width: 2px; border-bottom-right-radius: 6px; }
+
+    /* Temple arch (gopuram dome) that holds the monogram */
+    .temple-arch {
+      border-radius: 50% 50% 14px 14px;
+      background: linear-gradient(165deg, #FFFDF8 0%, #F2E8D6 100%);
+      border: 2px solid #C4A35A;
+      box-shadow:
+        inset 0 0 0 4px rgba(196, 163, 90, 0.18),
+        0 10px 28px rgba(74, 20, 32, 0.12);
+    }
+
+    .meaning-item {
+      border-left: 3px solid #C4A35A;
+    }
+
+    .heart-pulse {
+      display: inline-block;
+      animation: heartPulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes heartPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.12); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .heart-pulse { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body class="font-body text-maroon-deep antialiased">
+  <div class="min-h-screen flex flex-col">
+
+    <!-- ===== Traditional temple border (top) ===== -->
+    <div class="bg-maroon-deep h-2.5"></div>
+    <div class="temple-edge-down"></div>
+
+    <main class="flex-1 w-full max-w-xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-10 sm:space-y-14">
+
+      <!-- ========== 1. HERO SECTION ========== -->
+      <header class="text-center space-y-5 sm:space-y-6">
+
+        <!-- Kalasam with mango leaves: the auspicious opening motif -->
+        <div class="flex justify-center">
+          <svg
+            class="w-16 h-20 sm:w-20 sm:h-24"
+            viewBox="0 0 120 150"
+            fill="none"
+            stroke="#C4A35A"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            role="img"
+            aria-label="கலசம்"
+          >
+            <!-- mango leaves -->
+            <path d="M52 72 C 34 66 22 50 20 30 C 40 34 52 52 52 72Z" fill="rgba(60,127,74,0.14)" stroke="#3C7F4A" />
+            <path d="M68 72 C 86 66 98 50 100 30 C 80 34 68 52 68 72Z" fill="rgba(60,127,74,0.14)" stroke="#3C7F4A" />
+            <path d="M56 70 C 45 59 39 43 41 27 C 55 37 60 53 56 70Z" fill="rgba(60,127,74,0.2)" stroke="#3C7F4A" />
+            <path d="M64 70 C 75 59 81 43 79 27 C 65 37 60 53 64 70Z" fill="rgba(60,127,74,0.2)" stroke="#3C7F4A" />
+            <!-- coconut -->
+            <ellipse cx="60" cy="30" rx="12" ry="14" fill="#FBF7F0" />
+            <path d="M60 16 C 56 22 56 38 60 44" stroke="#C4A35A" stroke-width="1.2" />
+            <!-- rim -->
+            <path d="M40 72 H80 L74 82 H46 Z" fill="rgba(196,163,90,0.14)" />
+            <!-- pot body -->
+            <path d="M46 82 C 26 90 24 118 42 130 C 52 136 68 136 78 130 C 96 118 94 90 74 82 Z" fill="rgba(196,163,90,0.1)" />
+            <path d="M34 104 H86" stroke="#C4A35A" stroke-width="1.2" />
+            <path d="M60 96 l6 6 -6 6 -6 -6 Z" stroke="#C4A35A" stroke-width="1.2" />
+            <!-- base -->
+            <path d="M46 130 H74 L70 142 H50 Z" fill="rgba(196,163,90,0.14)" />
+          </svg>
+        </div>
+
+        <!-- Monogram inside a temple arch -->
+        <div class="flex justify-center">
+          <div class="relative">
+            <!-- finial above the arch -->
+            <span
+              class="absolute left-1/2 -translate-x-1/2 -top-3 w-2.5 h-2.5 rotate-45 bg-gold rounded-[2px]"
+              aria-hidden="true"
+            ></span>
+            <div
+              class="temple-arch w-28 h-32 sm:w-36 sm:h-40 flex items-center justify-center"
+              aria-label="B and V monogram"
+            >
+              <!-- Swap this block for an <img> of the couple photo if you want one -->
+              <div class="text-center select-none px-2">
+                <p class="font-heading text-3xl sm:text-4xl leading-none text-maroon">
+                  B <span class="text-gold">&amp;</span> V
+                </p>
+                <span class="block mx-auto mt-2 w-8 h-px bg-gold/60" aria-hidden="true"></span>
+                <p class="mt-2 text-[10px] sm:text-[11px] tracking-[0.18em] uppercase text-maroon-soft/75">
+                  15 · 11 · 2026
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="font-script text-base sm:text-lg text-maroon leading-relaxed px-2">
+          புவனேஸ்வரன்
+          <span class="text-gold mx-1">&amp;</span>
+          வசந்தலட்சுமிஸ்ரீ
+        </p>
+
+        <h1 class="font-heading text-[1.3rem] leading-relaxed sm:text-2xl sm:leading-relaxed text-maroon-deep px-1 pt-1">
+          யாயும் ஞாயும் யாரா கியரோ?
+          <span class="heart-pulse text-maroon" aria-hidden="true">❤️</span>
+        </h1>
+
+        <div class="flex items-center justify-center gap-3">
+          <span class="ornament-line w-16 sm:w-24"></span>
+          <span class="text-gold text-lg" aria-hidden="true">✦</span>
+          <span class="ornament-line w-16 sm:w-24"></span>
+        </div>
+      </header>
+
+      <!-- ========== 2. THE POEM SECTION ========== -->
+      <section aria-labelledby="poem-heading">
+        <h2 id="poem-heading" class="sr-only">குறுந்தொகை பாடல்</h2>
+        <blockquote class="poem-card corner-frame kolam-bg shadow-card rounded-2xl px-6 py-8 sm:px-9 sm:py-10 text-center">
+          <span class="corner corner-tl" aria-hidden="true"></span>
+          <span class="corner corner-tr" aria-hidden="true"></span>
+          <span class="corner corner-bl" aria-hidden="true"></span>
+          <span class="corner corner-br" aria-hidden="true"></span>
+
+          <p class="font-heading text-[1.05rem] sm:text-xl leading-[2] sm:leading-[2.15] text-maroon-deep">
+            <span class="block">யாயும் ஞாயும் யாரா கியரோ?</span>
+            <span class="block">எந்தையும் நுந்தையும் எம்முறைக் கேளிர்?</span>
+            <span class="block">யானும் நீயும் எவ்வழி அறிதும்?</span>
+            <span class="block mt-3 text-maroon">செம்புலப் பெயல்நீர் போல,</span>
+            <span class="block text-maroon font-semibold">அன்புடை நெஞ்சம் தாம் கலந்தனவே!</span>
+          </p>
+
+          <footer class="mt-6 pt-4 border-t border-gold/30">
+            <cite class="not-italic text-xs sm:text-sm text-maroon-soft tracking-wide">
+              — குறுந்தொகை 40 · செம்புலப் பெயனீரார்
+            </cite>
+          </footer>
+        </blockquote>
+      </section>
+
+      <!-- ========== 3. THE MEANING SECTION ========== -->
+      <section aria-labelledby="meaning-heading" class="space-y-5">
+        <div class="text-center space-y-2">
+          <h2 id="meaning-heading" class="font-heading text-xl sm:text-2xl text-maroon-deep">
+            பொருள்
+          </h2>
+          <div class="flex items-center justify-center gap-3">
+            <span class="ornament-line w-12"></span>
+            <!-- mango / paisley motif -->
+            <svg class="w-4 h-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+              <path d="M12 3c6 3 7 12 1 16-4 2.6-8-1-5.5-4.5C9 12 12 14 11 16" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="ornament-line w-12"></span>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <article class="meaning-item bg-white/65 rounded-r-xl rounded-l-sm pl-4 pr-4 py-4 shadow-card">
+            <p class="font-heading text-[0.95rem] sm:text-base text-maroon font-semibold leading-relaxed">
+              யாயும் ஞாயும் யாரா கியரோ?
+            </p>
+            <p class="mt-2 text-[0.9rem] sm:text-[0.95rem] leading-relaxed text-maroon-deep/85">
+              என் தாயும், உன்னுடைய தாயும் இதற்கு முன்பு ஒருவருக்கொருவர் யாரோ?
+              <span class="block mt-1 text-maroon-soft text-sm">(அறியாதவர்கள்).</span>
+            </p>
+          </article>
+
+          <article class="meaning-item bg-white/65 rounded-r-xl rounded-l-sm pl-4 pr-4 py-4 shadow-card">
+            <p class="font-heading text-[0.95rem] sm:text-base text-maroon font-semibold leading-relaxed">
+              எந்தையும் நுந்தையும் எம்முறைக் கேளிர்?
+            </p>
+            <p class="mt-2 text-[0.9rem] sm:text-[0.95rem] leading-relaxed text-maroon-deep/85">
+              என் தந்தையும், உன்னுடைய தந்தையும் எந்த முறையில் உறவினர்கள்?
+              <span class="block mt-1 text-maroon-soft text-sm">(எந்த பந்தமும் இல்லாதவர்கள்).</span>
+            </p>
+          </article>
+
+          <article class="meaning-item bg-white/65 rounded-r-xl rounded-l-sm pl-4 pr-4 py-4 shadow-card">
+            <p class="font-heading text-[0.95rem] sm:text-base text-maroon font-semibold leading-relaxed">
+              யானும் நீயும் எவ்வழி அறிதும்?
+            </p>
+            <p class="mt-2 text-[0.9rem] sm:text-[0.95rem] leading-relaxed text-maroon-deep/85">
+              நீயும் நானும் கூட இதற்கு முன்பு எந்த வழியில் ஒருவரையொருவர் அறிமுகமானோம்?
+              <span class="block mt-1 text-maroon-soft text-sm">(முன் பின் தெரியாதவர்கள்).</span>
+            </p>
+          </article>
+
+          <article class="meaning-item bg-gradient-to-br from-maroon/5 to-gold/10 rounded-r-xl rounded-l-sm pl-4 pr-4 py-5 shadow-card border border-gold/25">
+            <p class="font-heading text-[0.95rem] sm:text-base text-maroon font-semibold leading-relaxed">
+              செம்புலப் பெயல்நீர் போல,<br class="sm:hidden" />
+              அன்புடை நெஞ்சம் தாம் கலந்தனவே!
+            </p>
+            <p class="mt-3 text-[0.9rem] sm:text-[0.95rem] leading-relaxed text-maroon-deep/90">
+              வானத்திலிருந்து பொழியும் மழைநீருக்கு நிறமோ, குணமோ இல்லை.
+              ஆனால், அது காய்ந்த செம்மண் நிலத்தில் விழும்போது, அந்த மண்ணோடு கலந்து
+              செந்நிறமாக மாறிவிடுகிறது. அதன் பிறகு மண்ணையும் நீரையும் பிரிக்கவே முடியாது.
+            </p>
+            <p class="mt-3 text-[0.9rem] sm:text-[0.95rem] leading-relaxed text-maroon-deep font-medium">
+              அதைப்போலவே, முன் முகமறியா தூரத்து துருவங்களாக இருந்த எங்கள் இருவரின்
+              அன்பான மனங்களும், இன்று பிரிக்க முடியாதபடி ஒன்றாக இணைந்துவிட்டன!
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ========== 4. COUPLE & DATE ========== -->
+      <section aria-labelledby="couple-heading" class="space-y-5">
+        <h2 id="couple-heading" class="sr-only">மணமக்கள் மற்றும் திருமண நாள்</h2>
+
+        <div class="poem-card corner-frame kolam-bg rounded-2xl px-5 py-8 sm:px-8 shadow-card text-center">
+          <span class="corner corner-tl" aria-hidden="true"></span>
+          <span class="corner corner-tr" aria-hidden="true"></span>
+          <span class="corner corner-bl" aria-hidden="true"></span>
+          <span class="corner corner-br" aria-hidden="true"></span>
+
+          <div class="space-y-1">
+            <p class="font-script text-xl sm:text-2xl text-maroon leading-relaxed">புவனேஸ்வரன்</p>
+          </div>
+
+          <div class="flex items-center justify-center gap-3 my-4">
+            <span class="ornament-line w-14"></span>
+            <span class="font-heading text-2xl text-gold" aria-label="and">&amp;</span>
+            <span class="ornament-line w-14"></span>
+          </div>
+
+          <div class="space-y-1 px-1">
+            <p class="font-script text-[1.15rem] sm:text-2xl text-maroon leading-relaxed">வசந்தலட்சுமிஸ்ரீ</p>
+          </div>
+
+          <!-- Wedding date -->
+          <div class="mt-7 inline-flex flex-col items-center rounded-xl border border-gold/40 bg-white/60 px-6 py-4">
+            <p class="font-heading text-2xl sm:text-3xl text-maroon-deep tracking-wide">
+              <time datetime="2026-11-15">15 · 11 · 2026</time>
+            </p>
+            <span class="block w-16 h-px bg-gold/60 my-2" aria-hidden="true"></span>
+            <p class="text-sm sm:text-base text-maroon-soft">15 நவம்பர் 2026</p>
+            <p class="text-xs sm:text-sm text-maroon-soft/80 mt-0.5">ஞாயிற்றுக்கிழமை</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== 5. FOOTER / THANK YOU ========== -->
+      <footer class="text-center space-y-6 pt-2 pb-4">
+        <div class="flex items-center justify-center gap-3">
+          <span class="ornament-line w-16 sm:w-24"></span>
+          <span class="text-gold" aria-hidden="true">♥</span>
+          <span class="ornament-line w-16 sm:w-24"></span>
+        </div>
+
+        <p class="font-heading text-base sm:text-lg leading-[1.95] text-maroon-deep px-2">
+          இரு இதயங்கள் இணையும் இந்த நன்னாளில்,<br />
+          புது வாழ்வின் இனிய பயணத்தைத் தொடங்க,<br />
+          உங்கள் அன்பு நிறைந்த வருகை<br />
+          எங்கள் மகிழ்ச்சிக்கு மகுடம் சூட்டட்டும்...
+        </p>
+
+        <p class="font-heading text-lg sm:text-xl text-gold tracking-[0.35em] pt-1">சுபம்</p>
+
+        <p class="text-[10px] sm:text-xs tracking-[0.2em] uppercase text-maroon-soft/60">
+          என்றும் அன்புடன் · With love
+        </p>
+      </footer>
+    </main>
+
+    <!-- ===== Traditional temple border (bottom) ===== -->
+    <div class="temple-edge-up"></div>
+    <div class="bg-maroon-deep h-2.5"></div>
+  </div>
+</body>
+</html>
